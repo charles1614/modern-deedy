@@ -8,6 +8,13 @@
 \ProcessOptions\relax
 \LoadClass{article}
 
+\usepackage{xeCJK}
+\setCJKfamilyfont{yh}{Microsoft YaHei}      % 1.微软雅黑 yh  
+\newcommand{\yh}{\CJKfamily{yh}}
+\newfontfamily\ls{LiSu} % 2.隶书 ls
+% \setCJKsansfont{黑体}
+% \setCJKmonofont{仿宋_GB2312}%中文等宽字体
+
 %--------------------------------------------------------------
 % Package Imports
 \RequirePackage[english]{babel}
@@ -120,12 +127,18 @@
 \normalfont}
 
 % Project command
-\newcommand{\Project}[2]{
+\newcommand{\Project}[1]{
 \runsubsection{%
-\href{#2}{\uppercase{#1} \,\faExternalLink}
+\href{#1}{\uppercase{#1}}
 }
     \hfill
 }
+% \newcommand{\Project}[2]{
+% \runsubsection{%
+% \href{#2}{\uppercase{#1} \,\faExternalLink}
+% }
+%     \hfill
+% }
 
 % Underlined link command
 \newcommand{\underlinedLink}[2]{%

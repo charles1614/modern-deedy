@@ -1,4 +1,4 @@
-\documentclass[]{resume-openfont}
+\documentclass[a4paper]{resume-openfont}
 
 \pagestyle{fancy}
 \resetHeaderAndFooter
@@ -7,24 +7,24 @@
 % Convenience command - make it easy to fill template
 
 % Create job position command. Parameters: company, position, location, when
-\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}}\descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
+\newcommand{\resumeHeading}[4]{\runsubsection{\uppercase{#1}} \descript{ | #2}\hfill\location{#3 | #4}\fakeNewLine}
 
 % Create education heading. Parameters: Name, degree, location, when
-\newcommand{\educationHeading}[4]{\runsubsection{#1}\hspace*{\fill}  \location{#3 | #4}\\
-\descript{#2}\fakeNewLine}
+\newcommand{\educationHeading}[4]{\runsubsection{#1} \hspace{10pt} \descript{#2} \hspace*{\fill}  \location{#3 | #4}\\}
+% \descript{#2}\fakeNewLine}
 
 % Create project heading. Parameters: Name, link, Tech stack
-\newcommand{\projectHeading}[3]{\Project{#1}{#2}
-\descript{#3}\\}
+\newcommand{\projectHeading}[2]{\Project{#1}
+\descript{#2}\\}
 
 \newcommand{\projectHeadingWithDate}[4]{\Project{#1}{#2}
 \descript{#3 | #4}\\}
 
 % Parameters: courses
-\newcommand{\courseWork}[1]{\textbf{Coursework:} #1}
+\newcommand{\courseWork}[1]{\textbf{课程:} #1}
 
 % Parameters: courses
-\newcommand{\teacherAssistant}[1]{\textbf{Teacher Assistant (TA):} #1}
+\newcommand{\research}[1]{\textbf{课题:} #1}
  
 %--------------------------------------------------------------
 \begin{document}
@@ -32,15 +32,15 @@
 %--------------------------------------------------------------
 %     Profile
 %--------------------------------------------------------------
-\newcommand{\yourName}{First Last}
+\newcommand{\yourName}{夏立斌}
 % How you want it to show up on the resume
-\newcommand{\yourWebsite}{abdullaharif.tech}
+% \newcommand{\yourWebsite}{abdullaharif.tech}
 % vs how you want it to show up. If it's you can just replace "\yourWebsiteLink" with "yourWebsite"
-\newcommand{\yourWebsiteLink}{https://abdullaharif.tech}
-\newcommand{\yourEmail}{someEmail@edu.com}
-\newcommand{\yourPhone}{1-234-567-890}
-\newcommand{\githubUserName}{aarif123456}
-\newcommand{\linkedInUserName}{abdullaharif98}
+% \newcommand{\yourWebsiteLink}{https://abdullaharif.tech}
+\newcommand{\yourEmail}{libin.xia@139.com}
+\newcommand{\yourPhone}{13716959661}
+% \newcommand{\githubUserName}{aarif123456}
+% \newcommand{\linkedInUserName}{abdullaharif98}
 
 % An alternate profile section 
 % \alignProfileTable
@@ -56,10 +56,10 @@
 % \end{tabular*}
 
 \begin{center}
-    \Huge \scshape \latoRegular{\yourName} \\ \vspace{1pt}
-    \small \href{mailto:\yourEmail}{\underline{\yourEmail}}  $|$  \yourPhone $|$ 
-    \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
-    \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
+    \Huge \scshape \latoRegular{\yourName} \\ \vspace{4pt}
+    \small \href{mailto:\yourEmail}{\yourEmail}  $|$  \yourPhone
+    % \href{https://www.linkedin.com/in/\linkedInUserName}{\underline{linkedIn/\linkedInUserName}} $|$
+    % \href{https://github.com/\githubUserName}{\underline{github/\githubUserName}} 
     % $|$ \href{\yourWebsiteLink}{\underline{\yourWebsite}}
 \end{center}
 
@@ -68,37 +68,41 @@
 %--------------------------------------------------------------
 \section{Education}
 % Put school first and degree second if your school is reputable
-\educationHeading{BSc. Honours Computer Science With Software Engineering Specialization}{University of Windsor}{Windsor, ON}{Jun 2021}
+\educationHeading{硕博. 中国科学院大学}{计算机应用技术}{北京}{2018 - 2023}
 
-\teacherAssistant{World Wide Web Information Systems Development}
-% \courseWork{Data Structures and Algorithms; Operating Systems;  Computer Security; Software Testing; Advanced Networking; Big Data Analytics}
+\research{\textbf{面向高能物理计算的并行内存计算技术研究} (分布式计算, 大数据技术)}
+
+\courseWork{}{高级计算机系统结构; 操作系统高级教程; 算法设计与分析; 形式化方法; 高级人工智能; 随机过程; 最优控制}
+
+\
+
+\educationHeading{本科. 哈尔滨工业大学}{测控技术与仪器}{哈尔滨}{2014 - 2018}
+
+\research{\textbf{火星车低重力模拟中的三维位姿测量系统设计} (机器视觉)}
+
+\courseWork{}{模拟电子技术; 数字电子技术; 数字信号处理; 自动控制原理; 数字图像处理; 嵌入式系统}
 \sectionsep
 
 %--------------------------------------------------------------
 %     Experience
 %--------------------------------------------------------------
 \section{Work Experience}
-\resumeHeading{Amazon}{Software Development Engineer Intern}{Toronto, ON}{May 2020 – Aug 2020}
+
+\resumeHeading{中国科学院大学}{研究生/研究助理}{北京}{2019.9 - 2023.6}
 \begin{bullets}
-    \item Designed and implemented a dashboard using \textbf{React} and \textbf{TypeScript} to visualize data stored in \textbf{DynamoDB}, decreasing time to understand delivery driver work sessions by over 10 times.
-    %  \item Here is another bullet that I might choose to uncomment for some jobs
-    \item Ensured only authorized employees have access to the application by creating an \textbf{AWS Lambda@Edge} function to intercept and sign valid requests.
-    \item Devised and deployed the infrastructure in TypeScript through \textbf{AWS CDK}, then created efficient algorithms to process data from a custom \textbf{REST API}, so it could scale to handle millions of deliveries.
-    \item Setup a CI/CD pipeline and exceeded requirements in each stage, which lead to the application being pushed to production.
+    \item 北京正负电子对撞机国家实验室\ -\ 参与基于机器学习的插入件姿态\textbf{多目标优化算法}研究。
+    \item 高能物理研究所计算中心\ -\ 参与面向高能物理分波分析方法的\textbf{内存计算}关键技术研究。
+    \item 高能物理研究所计算中心\ -\ 参与基于内存计算的机器学习与LQCD\textbf{并行计算}关键技术研究。
+    \item 高能同步辐射光源\ -\ 参与下一代高能同步辐射光源的\textbf{数据处理系统}设计及研究。
+    \item 中物院北京九所 \ -\ 参与\textbf{高性能计算机运行时优化}方法研究。
 \end{bullets}
 \sectionsep
 
-\resumeHeading{University of Windsor}{Research Assistant (RA)}{Windsor, ON}{Feb 2020 - May 2020}
+\resumeHeading{哈尔滨工业大学}{本科生}{哈尔滨}{2014.9 – 2018.6}
 \begin{bullets}
-    \item Developed a Personal Health Record (PHR) system in \textbf{\href{https://spring.io/}{Spring}} based on the theoretical model outlined in \underlinedLink{https://research.library.mun.ca/11920}{Mitu Kumar's thesis}.
-    \item Applied the \href{https://link.springer.com/chapter/10.1007/978-3-642-10838-9\_23}{mCP-ABE} encryption scheme using the \href{http://gas.dia.unisa.it/projects/jpbc/}{JPBC} library, so patients have fine-grained access control over their health records with the ability to instantly revoke access.
-\end{bullets}
-\sectionsep
-
-\resumeHeading{JoaTu}{Software Engineer Intern}{Montreal, QC}{Dec 2018 – May 2019}
-\begin{bullets}
-    \item Rewrote legacy \textbf{Django code} in \textbf{Ruby in Rails} and refactored it to make the system more extensible.
-    \item Created \textbf{UML} diagrams and documented where features were implemented, to make the codebase more maintainable.
+    \item 超精密光电仪器工程研究所\ -\ 作为组长完成了基于\textbf{激光干涉的远程窃听器设计}的项目。
+    \item 机器智能与翻译研究室\ -\ 学习\textbf{机器翻译}与\textbf{人工智能}相关理论技术。
+    \item 自动化测试与控制系\ -\  参与中国空间技术研究院的火星车\textbf{位姿运动视觉}测量系统的研制部分工作。
 \end{bullets}
 \sectionsep
 
@@ -107,24 +111,56 @@
 %--------------------------------------------------------------
 \section{Projects}
 
-\projectHeading{Automated Spear-Phisher}{https://github.com/Aarif123456/Fb-Twitter-gui}{Python, PySpark, Selenium, Apache, NLP, Big Data}
-A security research tool to send targeted spam messages on either Facebook or Twitter. The program analyzes the feed of its target to increase the effectiveness of the messages.\\
-\sectionsep
-  
-\projectHeading{Image Repository}{https://github.com/Aarif123456/image\_repository}{Java, PHP, React, TypeScript, Maven, GCP, MySQL}
-A full-stack image repository, where users can store their files. Created a GCP cloud function to implement \href{https://www.cs.utexas.edu/~bwaters/publications/papers/cp-abe.pdf}{CP-ABE} encryption and used it to ensure files are secure at rest.\\
+\projectHeading{分布式内存计算系统Blaze（博士课题）}{Spark, MPI, Scala, C, Java}
+针对高能物理中高性能计算和大数据任务,提供了统一的内存计算系统。
+通过Spark内存计算与MPI消息传递模型相结合,
+解决了大数据计算MapReduce编程模型表达能力的缺陷,
+并为MPI提供了面向数据的DAG计算方式。
+适用于大规模数据量环境下的科学计算与数据处理任务,如迭代密集型计
+算或具有任务通信特征的算法与应用等。
+
 \sectionsep
 
-\projectHeading{Biometric Dynamic Keystroke Spoofer}{https://github.com/Aarif123456/KeystrokeDynamicsSpoofer}{Python, Object-Oriented Design, CyberSecurity}
-A program that authenticates users based on their typing patterns. And a spoofer that uses the genetic algorithm to mimic the user's typing pattern.
+\projectHeading{分布式内存管理系统Lattice（博士课题）}{Distributed System, Networks, Concurrency, C++}
+Lattice为计算系统Blaze中的一个可独立运行的子系统,
+提供分布式数据集在内存中的缓存功能,
+及跨系统/语言间的zero-copy数据共享。
+利用上层计算系统的data-locality特性,
+在节点内通过共享内存的方式实现,
+并使用自定义的内存分配器对MPI进程通信进行了优化。
+该系统的具体实现基于ASIO, GRPC。
 \sectionsep
 
-\projectHeading{Distributed Key-Value store}{https://github.com/Aarif123456/Distributed-DB}{Java, Distributed System, Computer Networks, Concurrency}
-A distributed key-value store which automatically replicates data in the background while the user manages their data. Implemented a custom P2P protocol to maximize fault tolerance and scalability.\\
+\projectHeading{高性能计算机性能诊断方法研究（九所实习）}{C, C++, Linux}
+为满足高性能计算机上数值模拟程序的运行时效率提升需求，
+提出了访存不连续问题、伪共享问题、冗余计算问题的诊断方法\textbf{FsDt}、\textbf{McDt}，
+利用于性能问题监控、诊断及优化平台JPerfCT中。
 \sectionsep
 
-\projectHeading{War of Weebles}{https://github.com/Aarif123456/GoalOrientedBehaviour}{C\#, Unity, Concurrency, Artificial Intelligence}
-A capture-the-flag-styled shooting game composed of AI-controlled players. The agents change their goals based on various factors, such as their health, current weapon, their personality and what they see.\\
+\projectHeading{分布式异构存储系统HTFS（合作参与）}{HDFS, Java, Tape, Linux}
+HTFS被设计用于高能物理海量数据存储系统中。
+通过在分布式文件存储系统HDFS的基础上,
+增加磁带层的存储支持,
+通过统一的内存级元数据管理方式,
+使得用户可以对异构存储系统中的文件进行透明访问。
+\sectionsep
+
+\projectHeading{Super-Level SetEstimation算法优化（算法研究）}{Python, Matlab}
+研究了一类从含有噪声的数据中提取函数水平集的信号估计问题,通过加入基于贝叶斯方法的高斯建模优化,
+得到了更高的分类精度与更快的收敛速度。
+\sectionsep
+
+\projectHeading{OpenRoad芯片设计（课程项目）}{OpenRoad, Docker, Verilog}
+基于OpenRoad实现了RTL-to-GDSII的全流程芯片设计。
+在该项目中使用Verilog自主实现了一个具有五级流水线的CPU,
+同时对一个单核32位的小型RISC-V处理器核（tinyriscv）进行了从RTL到GDS的测试。
+\sectionsep
+
+\projectHeading{基于单目视觉的位姿测量系统设计（本科课题）}{C++, Halcon, LabView, OpenCV}
+基于单目相机成像理论,
+完成了图像特征点提取与位姿解算的算法设计及软件开发,
+并最终部署于实时嵌入式系统中。
+项目重点研究了视觉采集与处理实时性的提高, 以及计算精度的优化以及稳定性的增强。
 \sectionsep
 
 % Example using bullets and dates 
@@ -140,11 +176,9 @@ A capture-the-flag-styled shooting game composed of AI-controlled players. The a
 %--------------------------------------------------------------
 \section{Skills}
 \begin{skillList}
-    \singleItem{Languages:}{Java, C++, Python, C\#, PHP, Prolog, Bash, C, Racket, SQL}
+    \singleItem{Languages:}{C++, Java, Python, Scala, Go, Rust}
     \\
-    \singleItem{Web Development:}{React, JavaScript, TypeScript, HTML/CSS}
-    \\
-    \singleItem{Technology:}{Git, AWS, GCP, Azure, Docker, Unity, Apache, \LaTeX, MongoDB, DynamoDB, Neo4j}
+    \singleItem{Technology:}{MPI, Spark, HDFS, Git, Docker, Ray}
 \end{skillList}
 
 % A more concise alternate 
@@ -155,4 +189,140 @@ A capture-the-flag-styled shooting game composed of AI-controlled players. The a
 %     \doubleItem{Web Development:}{JavaScript, TypeScript, React, HTML/CSS}
 %     {Technology:}{Git, AWS, GCP, Azure, Docker, \LaTeX}%
 % \end{skillList}
+
+%--------------------------------------------------------------
+%     Self Introduction
+%--------------------------------------------------------------
+
+% .
+\quad
+\bigbreak
+\bigbreak
+\bigbreak
+\bigbreak
+
+\section{Self Introduction}
+
+\projectHeading{个人自述}{}
+% \begin{bullets}
+\qquad 
+本人出生于1995年9月，
+目前在中国科学院大学攻读计算机博士学位，
+本科毕业于哈尔滨工业大学自动化测试与控制系。
+
+\qquad 曾于北京正负电子对撞机国家实验室担任研究助理，
+参与基于机器学习的插入件姿态多目标优化算法研究，
+深入学习研究了光束线物理设计及人工智能算法在插入件控制中的应用。
+后进入高能物理研究所计算中心，
+进行计算技术及系统架构的研究，
+参与了“高能物理数据分析的Hadoop/HBASE平台研究“
+、“面向高能物理分波分析方法的内存计算关键技术研究“
+等国家自然科学基金项目。
+博士研究课题为面向高能物理的并行内存计算技术研究，
+主要贡献为：将高性能计算技术与互联网大数据技术结合，
+提出了一种基于Spark内存计算模型的消息传递方法，
+以及针对分布式计算框架的内存优化方法，
+为高能物理数值计算应用提供了一个新型的内存计算平台。
+目前以第一作者发表EI/核心期刊两篇，在投一篇。
+
+\qquad 2022年7-8月于中物院\textbf{北京九所}进行了为期两个月的暑假实习，
+研究课题为“计算、访存低效问题的细粒度诊断方法研究“，
+经过数十篇的文献调研，
+以及软件测试实验，
+总结提出了“FsDt、McDt”两种访存低效性诊断方法，
+并形成了20页的技术报告。
+在九所的实习过程中，
+经由武林平和景翠萍两位老师的悉心指导，
+使得本人从零开始学习到了高性能计算机的运行时优化方法，
+收获颇丰，并对该方向产生了浓厚的兴趣，
+希望可以作为一生奋斗奉献的方向。
+九所的两弹精神、国防使命、历史传承无不打动着一颗青年人的澎湃的内心，
+面对当前复杂的国际局势，
+作为国家花费十余年培养出来的博士研究生，
+更应该有担当、有能力、有信心解决难题。
+在实习过程中，
+深刻体会到了高性能计算机在国防领域数值模拟中具有着无可替代的重要作用，
+并且九所有着强大的技术积累，
+和优秀的科研技术团队，
+这都吸引着我加入九所，
+渴望贡献出自己的力量。
+
+\bigbreak
+\medbreak
+\smallbreak
+% \end{bullets}
+\sectionsep
+
+\sectionsep
+
+%--------------------------------------------------------------
+%     Research Proposal
+%--------------------------------------------------------------
+
+\section{Research Proposal}
+
+\projectHeading{研究计划1：高性能计算机运行时优化}{}
+\quad 在高性能计算机利用数值模拟方法进行物理实验及武器研制工作，
+已经是当前环境下的重要手段。
+但在实际的使用过程中，
+计算、存储、通信等诸多部件的利用率都处于很低的水平，
+不仅会拖慢实验的研究进展，
+同时也对硬件设备造成极大的资源浪费、经济损失以及能源消耗。
+因此，从系统和应用两个行为层面，
+对硬件利用率瓶颈进行分析诊断，
+找出限制运行效率的根本问题，
+并给出针对性的优化方案，
+这对于提升科学研究效率和节约经济和能源资源都具有重要意义。
+
+\quad 在九所暑期实习的过程中，
+针对应用行为中的访存问题，
+对国内外的研究现状进行了调研，
+发现了诸多在技术上需要解决的问题。
+虽然在实习过程中提出了两种诊断方法，
+并在开源平台上进行了初步的实验，
+但仍然缺乏充分完备的实验验证，
+同时下一步还需要在自主研发的JPerfCT上进行实现，
+并为用户提供直观的诊断报告。
+同时对于系统行为的诊断，
+如系统噪声等问题也是运行时优化的重点，
+这些都需要进行更加深入的研究。
+与技术研究同样重要的是，
+JPerfCT,JSysCT这样的工具产品，
+需要健壮稳定的工程实现，
+这些都是我在未来计划工作的方向。
+
+
+\quad
+
+\projectHeading{研究计划2：科学数据管理平台研究}{}
+\quad 随着高性能计算机技术的快速发展，
+以及对模拟实验要求的不断精细化，
+数据量规模的正面临着爆炸式增长的挑战。
+在九所的科研环境下，该问题也在不断凸显，
+海量数据的存储、管理、检索等都是亟需解决的问题。
+具体包含：
+多种存储介质及文件系统如何进行统一的视图化，
+文件元数据的管理方法，
+以及分级存储的调度策略等。
+当前开源社区虽然有诸多存储系统的解决方案，
+但往往都是针对于互联网数据、云计算或特定场景下的实现与优化。
+面对九所科学数据的特殊性，
+同样需要设计一套适用于九所的科学数据管理平台。
+
+\quad 在高能物理研究所的计算中心，
+管理着PB级别的高能物理数据，
+并在未来会增长至EB级别。
+在我于计算中心学习的过程中，
+接触到了诸多并行/分布式文件系统，
+如Lustre、HDFS、EOS等。
+并参与了基于HDFS的分布式异构存储系统HTFS的研究工作。
+该工作包含了对HDFS增加了对磁带库的支持，
+并提供统一的元数据管理功能。
+相信在高能物理领域的存储系统研究经验，
+也会对九所科学数据管理平台的研究与建设有所帮助，
+未来也计划参与到这一方面的研究和开发工作中。
+
+
+\sectionsep
+
 \end{document}
