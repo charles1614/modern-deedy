@@ -7,29 +7,28 @@ RESUME_NAME = resume
 
 # --- Commands ---
 LATEX_COMPILER = xelatex
-BIBTEX_COMPILER = bibtex
 
 # --- Files ---
-TEX_FILE = $(SRC_DIR)/$(RESUME_NAME).tex
+TEX_SOURCES = $(wildcard $(SRC_DIR)/*.tex) $(wildcard $(SRC_DIR)/*.cls) $(wildcard $(SRC_DIR)/*.sty)
+FONT_SOURCES = $(wildcard $(SRC_DIR)/fonts/**/*)
+SOURCES = $(TEX_SOURCES) $(FONT_SOURCES)
+
 PDF_FILE = $(BUILD_DIR)/$(RESUME_NAME).pdf
-AUX_FILE = $(BUILD_DIR)/$(RESUME_NAME).aux
 
 # --- Targets ---
-.PHONY: all clean
+.PHONY: all clean help
 
 all: $(PDF_FILE)
 
-$(PDF_FILE): $(TEX_FILE)
+$(PDF_FILE): $(SOURCES)
 	@mkdir -p $(BUILD_DIR)
-	@cp -r $(SRC_DIR)/* $(BUILD_DIR)/
-	cd $(BUILD_DIR) && $(LATEX_COMPILER) -interaction=nonstopmode $(RESUME_NAME).tex
+	cd $(SRC_DIR) && $(LATEX_COMPILER) -output-directory=../$(BUILD_DIR) -interaction=nonstopmode $(RESUME_NAME).tex
 
 clean:
 	@rm -rf $(BUILD_DIR)
 	@rm -f *.aux *.fdb_latexmk *.fls *.log *.out *.synctex.gz missfont.log
 	@rm -rf Tmp .texpadtmp
 
-# --- Help ---
 help:
 	@echo "Usage: make [target]"
 	@echo "Targets:"
