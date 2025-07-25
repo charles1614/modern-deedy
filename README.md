@@ -14,25 +14,40 @@ I love the way [Jake's Resume](https://www.overleaf.com/latex/templates/jakes-re
 
 ## Quick Start :rocket:
 
-You can build it locally on your machine with `xelatex` or open the project in overleaf. I recommend the latter.
+This project uses `xelatex` to build the resume. You can either build it locally or use Overleaf.
 
-### Steps to open in Overleaf
+### Local Build
 
-[Overleaf template](https://www.overleaf.com/latex/templates/modern-deedy/cxtjgrmpsrvh)
+1.  **Prerequisites:** Make sure you have a LaTeX distribution installed on your system that includes `xelatex`.
+2.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/Aarif123456/modern-deedy.git
+    cd modern-deedy
+    ```
+3.  **Build the resume:**
+    ```bash
+    make
+    ```
+    The compiled PDF will be available in the `build` directory.
 
-If the template gives you an error after opening. Then you will need to change the compiler.
+### Overleaf
+
+You can also use the [Overleaf template](https://www.overleaf.com/latex/templates/modern-deedy/cxtjgrmpsrvh). If you encounter any errors, you may need to change the compiler to `XeLaTeX` in the Overleaf settings.
 
 ![Change Compiler](https://i.imgur.com/ypHmlbX.gif)
 
-Step 1
+## Project Structure
 
-![Press Recompile](https://i.imgur.com/OPJ3DPp.gif)
+The project is organized as follows:
 
-Step 2
+-   `src/`: Contains all the source files for the resume, including the main `.tex` file, class and style files, and fonts.
+-   `build/`: This directory is created when you run `make` and contains the final PDF output and intermediate build files.
+-   `Makefile`: Automates the build process.
+-   `.gitignore`: Specifies which files and directories to ignore in version control.
 
-## API details :gear:
+## Customization :gear:
 
-If you want to change the font just download the fonts and move the unzipped folder to the fonts folder. Then go to local-font.sty and change the font name and folder at the top folder. You can crtl+f `\newcommand{\fontFolder}` to find it faster.
+To change the font, download your desired fonts and place them in the `src/fonts` directory. Then, update the `src/lato-font.sty` and `src/raleway-font.sty` files to use the new font names. You can find the font definitions by searching for `\newfontfamily`.
 
 ## Resume Tips :books:
 

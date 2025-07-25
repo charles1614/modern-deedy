@@ -10,8 +10,13 @@
 
 \usepackage{xeCJK}
 \setCJKfamilyfont{yh}{Microsoft YaHei}      % 1.微软雅黑 yh  
-\newcommand{\yh}{\CJKfamily{yh}}
-\newfontfamily\ls{LiSu} % 2.隶书 ls
+
+%\setCJKmainfont[BoldFont={Adobe Heiti Std},ItalicFont={Adobe Kaiti Std}]{Adobe Heiti Std} 
+%\setCJKsansfont{Adobe Heiti Std} 
+%\setCJKmonofont{Adobe Fangsong Std} 
+
+%\newcommand{\yh}{\CJKfamily{yh}}
+%\newfontfamily\ls{LiSu} % 2.隶书 ls
 % \setCJKsansfont{黑体}
 % \setCJKmonofont{仿宋_GB2312}%中文等宽字体
 
@@ -31,7 +36,7 @@
 % Using tables like the profile section
 \RequirePackage{tabularx}
 % Used for the link symbol
-\RequirePackage{fontawesome}
+\RequirePackage{fontawesome5}
 % Set up font 
 \RequirePackage{lato-font}
 \RequirePackage{raleway-font}

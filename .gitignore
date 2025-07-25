@@ -1,0 +1,19 @@
+# LaTeX build artifacts
+*.aux
+*.fdb_latexlab
+*.fls
+*.log
+*.out
+*.synctex.gz
+missfont.log
+resume.fdb_latexmk
+
+# PDF output
+*.pdf
+
+# Temporary directories
+.texpadtmp/
+Tmp/
+
+# Build directory
+build/
