@@ -1,3 +1,6 @@
+# macOS specific
+.DS_Store
+
 # LaTeX build artifacts
 *.aux
 *.fdb_latexlab
@@ -8,12 +11,11 @@
 missfont.log
 resume.fdb_latexmk
 
-# PDF output
-*.pdf
-
 # Temporary directories
 .texpadtmp/
 Tmp/
 
 # Build directory
 build/
+# But not the final resume PDF
+!build/resume.pdf
